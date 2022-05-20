@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Седона</title>
+</head>
 
-  </body>
+<body>
+  <header class="main-header">
+    <nav class="navigation">
+      <img class="image-logo" src="/images/logo.svg" alt="Логотип сайта">
+      <ul class="navigation-list">
+        <li class="navigation-item">
+          <a class="navigation-link page-active" href="index.html">Главная</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="about.html">О Седоне</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="catalog.html">Гостиницы</a>
+        </li>
+      </ul>
+      <ul class="navigation-list navigation-user">
+        <li class="navigation-item">
+          <a class="navigation-link" href="#">
+            <img class="image-search" src="/images/search.svg" alt="Значок поиска">
+            <span class="visually-hidden">
+              Поиск по сайту
+            </span>
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="#">
+            <div class="favorite-wrapper">
+              <img class="image-favorite" src="/images/favorite.svg" alt="Иконка сердечко-избранное">
+              <img class="image-number-favorites" src="/images/Icon-number.png" alt="Количество в избранном">
+              <span class="number-favorites">12</span>
+              <span class="visually-hidden">
+                Избранное
+              </span>
+            </div>
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="#">
+            <span class="visually-hidden">
+              Поиск гостиницы
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <p>
+    Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a
+      href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».
+  </p>
+</body>
+
 </html>
