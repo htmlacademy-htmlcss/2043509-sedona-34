@@ -13,7 +13,7 @@
       <img class="image-logo" src="/images/logo.svg" alt="Логотип сайта">
       <ul class="navigation-list">
         <li class="navigation-item">
-          <a class="navigation-link page-active" href="index.html">Главная</a>
+          <a class="navigation-link page-active">Главная</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="about.html">О Седоне</a>
@@ -34,8 +34,6 @@
         <li class="navigation-item">
           <a class="navigation-link" href="#">
             <div class="favorite-wrapper">
-              <img class="image-favorite" src="/images/favorite.svg" alt="Иконка сердечко-избранное">
-              <img class="image-number-favorites" src="/images/Icon-number.png" alt="Количество в избранном">
               <span class="number-favorites">12</span>
               <span class="visually-hidden">
                 Избранное
@@ -48,18 +46,20 @@
             <span class="visually-hidden">
               Поиск гостиницы
             </span>
+            ХОЧУ СЮДА
           </a>
         </li>
       </ul>
     </nav>
   </header>
   <main class="main-index">
-    <section class="intro">
-      <h1 class="intro-title">Седона — небольшой городок в Аризоне,
-        заслуживающий большего!</h1>
-      <p class="intro-subtitle">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
-    </section>
+    <div class="intro">
+
+    </div>
     <section class="advantages">
+      <h1 class="advantages-title">Седона — небольшой городок в Аризоне,
+        заслуживающий большего!</h1>
+      <p class="advantages-subtitle">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
       <ol class="advantages-list">
         <li class="advantages-item">
           <div class="advantages-wrapper">
@@ -68,12 +68,12 @@
             <p class="advanteges-subtitle">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
           <div class="advantages-image-wrapper">
-            <img class="advantages-image" src="" alt="Здания в городке Седона">
+            <img class="advantages-image" src="/images/photo-advantage-1.jpg" alt="Здания в городке Седона.">
           </div>
           <ul class="advantages-list sublist">
             <li class="advantages-item">
               <p>
-                <img class="advantages-icon" src="/images/Advantage-iconHouse.svg" alt="Иконка домик">
+                <img class="advantages-icon" src="/images/advantage-icon-house.svg" alt="Иконка домик.">
               </p>
               <h2 class="advantages-title">ЖИЛЬЁ</h2>
 
@@ -82,7 +82,7 @@
             </li>
             <li class="advantages-item">
               <p>
-                <img class="advantages-icon" src="/images/Advantage-iconBurger.svg" alt="Иконка бургер">
+                <img class="advantages-icon" src="/images/advantage-icon-burger.svg" alt="Иконка бургер.">
               </p>
               <h2 class="advantages-title">ЕДА</h2>
 
@@ -91,9 +91,9 @@
             </li>
             <li class="advantages-item">
               <p>
-                <img class="advantages-icon" src="/images/Advantage-iconGiftbox.svg" alt="Иконка подарочная коробка">
+                <img class="advantages-icon" src="/images/advantage-icon-giftbox.svg" alt="Иконка подарочная коробка.">
               </p>
-              <h2 class="advantages-title">ЖИЛЬЁ</h2>
+              <h2 class="advantages-title">СУВЕНИРЫ</h2>
 
               <p class="advanteges-subtitle">Рекомендуем пожить в настоящем мотеле,
                 всё как в кино!</p>
@@ -109,7 +109,7 @@
             <p class="advanteges-subtitle">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </div>
           <div class="advantages-image-wrapper">
-            <img class="advantages-image" src="" alt="Узкая скала, похожая на мост">
+            <img class="advantages-image" src="/images/photo-advantage-2.jpg" alt="Узкая скала, похожая на мост.">
           </div>
         </li>
         <li class="advantages-item">
@@ -136,11 +136,20 @@
 
       </ol>
     </section>
+    <section class="booking">
+      <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+      <strong class="booking-title">ЗАИНТЕРЕСОВАЛИСЬ?</strong>
+      <p class="booking-subtitle">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в
+        Седоне
+      </p>
+      <button class="button" type="button">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
+    </section>
+
 
   </main>
 
   <footer class="page-footer">
-    <section class="newsletter">
+    <section class="newsletter newsletter-index">
       <h2 class="newsletter-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h2>
       <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
         <label for="newsletter-email">Email</label>
@@ -157,19 +166,16 @@
         <li class="footer-social-item">
           <a class="button" href="https://vk.com/htmlacademyрмр">
             <span class="visually-hidden">ВКонтакте</span>
-            <img class="image-logo-social" src="/images/logoVkontakte.svg" alt="Логотип ВКонтакте">
           </a>
         </li>
         <li class="footer-social-item">
           <a class="button" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Телеграм</span>
-            <img class="image-logo-social" src="/images/logoTelegram.svg" alt="Логотип Телеграм">
           </a>
         </li>
         <li class="footer-social-item">
           <a class="button" href="https://www.youtube.com/user/htmlacademyruр">
             <span class="visually-hidden">Ютьюб</span>
-            <img class="image-logo-social" src="/images/logoYoutube.svg" alt="Логотип Ютьюб">
           </a>
         </li>
       </ul>
@@ -180,9 +186,9 @@
     </section>
 
     <div class="copyright-holder">
-      <h2 class="visually-hidden">Ссылка на сайт HTML-академии</h2>
+
       <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-        <img class="htmlacademy-logo" src="/images/HTMLAcademy.svg" alt="Логотип HTML-академии">
+        <span class="visually-hidden">Ссылка на сайт HTML-академии</span>
       </a>
     </div>
   </footer>
