@@ -10,7 +10,7 @@
 <body>
   <header class="page-header">
     <nav class="navigation">
-      <img class="image-logo" src="/images/logo.svg" alt="Логотип сайта">
+      <img class="image-logo" src="/images/logo-sedona.svg" alt="Логотип сайта">
       <ul class="navigation-list">
         <li class="navigation-item">
           <a class="navigation-link" href="index.html">Главная</a>
@@ -25,29 +25,20 @@
       <ul class="navigation-list navigation-user">
         <li class="navigation-item">
           <a class="navigation-link" href="#">
-            <img class="image-search" src="/images/search.svg" alt="Значок поиска">
-            <span class="visually-hidden">
-              Поиск по сайту
-            </span>
+            <span class="visually-hidden">Поиск по сайту</span>
           </a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">
             <div class="favorite-wrapper">
-              <img class="image-favorite" src="/images/favorite.svg" alt="Иконка сердечко-избранное">
-              <img class="image-number-favorites" src="/images/Icon-number.png" alt="Количество в избранном">
               <span class="number-favorites">12</span>
-              <span class="visually-hidden">
-                Избранное
-              </span>
+              <span class="visually-hidden">Избранное</span>
             </div>
           </a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">
-            <span class="visually-hidden">
-              Поиск гостиницы
-            </span>
+            <span class="visually-hidden">Поиск гостиницы</span>
           </a>
         </li>
       </ul>
@@ -156,7 +147,8 @@
       </a>
       <ul class="hotel-list">
         <li class="hotel-card">
-          <img class="hotel-card-image" src="" alt="Звёздное небо в просвете между скал">
+          <img class="hotel-card-image" src="/images/images-content/hotel-amara.png"
+            alt="Звёздное небо в просвете между скал.">
           <h3 class="hotel-card-title">Amara Resort &amp; Spa</h3>
           <span class="hotel-card-type">Гостиница</span>
           <span class="hotel-card-price">От 4000 &#8381;</span>
@@ -165,7 +157,7 @@
           <span class="hotel-card-rating">РЕЙТИНГ:8,5</span>
         </li>
         <li class="hotel-card">
-          <img class="hotel-card-image" src="" alt="Радуга над каньоном">
+          <img class="hotel-card-image" src="/images/images-content/hotel-villas.png" alt="Радуга над каньоном.">
           <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
           <span class="hotel-card-type">Гостиница</span>
           <span class="hotel-card-price">От 5000 &#8381;</span>
@@ -174,7 +166,8 @@
           <span class="hotel-card-rating">РЕЙТИНГ:9,2</span>
         </li>
         <li class="hotel-card">
-          <img class="hotel-card-image" src="" alt="Скалы на фоне голубого неба с облаками">
+          <img class="hotel-card-image" src="/images/images-content/hotel-desert.png"
+            alt="Скалы на фоне голубого неба с облаками.">
           <h3 class="hotel-card-title">Desert Quail Inn</h3>
           <span class="hotel-card-type">Гостиница</span>
           <span class="hotel-card-price">От 2500 &#8381;</span>
@@ -183,7 +176,8 @@
           <span class="hotel-card-rating">РЕЙТИНГ:6,9</span>
         </li>
         <li class="hotel-card">
-          <img class="hotel-card-image" src="" alt="Скалы в золотистом сиянии закатного солнца и появляющихся звёзд">
+          <img class="hotel-card-image" src="/images/images-content/hotel-green-tree.png"
+            alt="Скалы в золотистом сиянии закатного солнца и появляющихся звёзд.">
           <h3 class="hotel-card-title">GreenTree Inn</h3>
           <span class="hotel-card-type">Гостиница</span>
           <span class="hotel-card-price">От 1500 &#8381;</span>
@@ -192,10 +186,41 @@
           <span class="hotel-card-rating">РЕЙТИНГ:5,0</span>
         </li>
       </ul>
+      <ul class="pagination">
+        <li class="pagination-item">
+          <a class="pagination-link pagination-current">1</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">2</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">3</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">4</a>
+        </li>
+        <li class="pagination-item">
+          <button class="pagination-link pagination-show-more" type="button"><span class="visually-hidden">Следующие
+              страницы</span></button>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link pagination-last" href="#"><span class="visually-hidden">Последняя
+              страница</span>10</a>
+        </li>
+      </ul>
+      <label for="hotel-numbers">Гостиниц на странице</label>
+      <select class="select-control" name="hotels-on-page" id="hotel-numbers">
+        <option value="one">1</option>
+        <option value="two">2</option>
+        <option value="three">3</option>
+        <option value="four">4</option>
+        <option value="five">5</option>
+        <option value="six">6</option>
+      </select>
     </section>
   </main>
   <footer class="page-footer">
-    <section class="newsletter newsletter-catalog">
+    <section class="newsletter newsletter-inner">
       <h2 class="newsletter-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h2>
       <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
         <label for="newsletter-email">Email</label>
@@ -230,15 +255,12 @@
       <h2 class="visually-hidden">Контактный телефон - позвонить</h2>
       <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
     </section>
-
     <div class="copyright-holder">
-
       <a class="htmlacademy-link" href="https://htmlacademy.ru/">
         <span class="visually-hidden">Ссылка на сайт HTML-академии</span>
       </a>
     </div>
   </footer>
-
 </body>
 
 </html>
