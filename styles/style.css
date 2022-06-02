@@ -146,6 +146,10 @@ body {
   background-position: center;
 }
 
+.newsletter-form-input {
+  background-color: #F2F2F2;
+}
+
 .newsletter-button {
   width: 200px;
   height: 60px;
