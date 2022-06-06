@@ -24,13 +24,29 @@ html {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
+  height: 100%;
 }
 
 body {
+  height: inherit;
+
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #F2F2F2;
   margin: 0;
   padding: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  background-color: #FFFFFF;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .visually-hidden {
@@ -63,12 +79,57 @@ body {
   justify-content: center;
 }
 
+.page-header {
+  position: relative;
+  display: flex;
+  padding: 0 70px 0 239px;
+}
+
+.image-logo {
+  position: absolute;
+  top: 0;
+  left: 70px;
+}
+
+.navigation {
+  width: 891px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.navigation-list {
+  padding: 0;
+  margin: 0;
+  width: 390px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 20px 62px 0 17px;
+}
+
+.navigation-user {
+  width: 264px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0 14px 12px;
+}
+
 .navigation-link {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
   text-decoration: none;
+}
+
+.navigation-item {
+  padding-bottom: 18px;
+}
+
+.button-booking {
+  width: 160px;
 }
 
 .page-active {
@@ -78,13 +139,31 @@ body {
 /* Стили главной страницы */
 
 .intro {
+  padding-top: 51px;
+  padding-bottom: 82px;
   background-image: url("../images/intro-background.jpg");
+  margin-top: -1px;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-color: #750057;
 }
 
+.image-intro {
+  display: block;
+  margin: 0 auto;
+}
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+  padding-top: 63px;
+}
+
 .advantages-title {
+  margin: 0 auto;
+  padding-bottom: 31px;
+  width: 620px;
+  text-align: center;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -92,11 +171,19 @@ body {
 }
 
 .advantages-subtitle {
+  margin: 0 auto;
+  text-align: center;
   font-size: 22px;
   line-height: 26px;
+  padding-bottom: 90px;
+}
+
+.advantages-card {
+  display: flex;
 }
 
 .advantages-card-wrapper {
+  padding: 92px 85px;
   color: #FFFFFF;
   background-color: #82B3D3;
   text-align: center;
@@ -104,6 +191,8 @@ body {
 
 
 .advantages-item-title {
+  margin: 0 auto;
+  padding-bottom: 30px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -112,10 +201,17 @@ body {
 
 .advantages-item-subtitle {
   color: #333333;
+  margin: 0 auto;
 }
 
 .advantages-card-number {
+  display: block;
+  padding-bottom: 30px;
   text-transform: uppercase;
+}
+
+.advantages-card-subtitle {
+  margin: 0 auto;
 }
 
 .advantages-item {
@@ -145,10 +241,14 @@ body {
 }
 
 .booking {
+  padding-top: 91px;
+  padding-bottom: 93px;
   text-align: center;
 }
 
 .booking-title {
+  margin: 0;
+  padding-bottom: 29px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -156,11 +256,14 @@ body {
 }
 
 .booking-subtitle {
+  margin: 0;
+  padding-bottom: 56px;
   font-size: 22px;
   line-height: 26px;
 }
 
 .booking-button {
+  margin: 0;
   width: 574px;
   height: 60px;
   padding: 12px 15px;
@@ -170,6 +273,26 @@ body {
 
 .newsletter {
   text-align: center;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.newsletter-title {
+  margin: 0;
+  padding-bottom: 29px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.newsletter-subtitle {
+  margin: 0 auto;
+  padding-bottom: 46px;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  width: 475px;
 }
 
 .newsletter-index {
@@ -192,8 +315,12 @@ body {
   padding: 12px 15px;
   font-size: 20px;
   line-height: 36px;
+  font-weight: 700;
   background-color: #82B3D3;
   border: none;
+  border-radius: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .contacts-phone {
