@@ -49,7 +49,7 @@
             </svg>
           </a>
           <a class="button button-booking" href="#">
-            Хочу сюда
+            Хочу сюда!
           </a>
         </div>
       </nav>
@@ -229,6 +229,7 @@
             </div>
           </li>
         </ul>
+        <span class="divider"></span>
         <div class="pagination-pages-number-wrapper">
           <ul class="pagination">
             <li class="pagination-item">
@@ -244,7 +245,7 @@
               <a class="pagination-link" href="#">4</a>
             </li>
             <li class="pagination-item">
-              <span class="pagination-link pagination">...</span>
+              <span class="pagination-link">...</span>
             </li>
             <li class="pagination-item">
               <a class="pagination-link pagination-last" href="#"><span class="visually-hidden">Последняя
@@ -252,11 +253,11 @@
             </li>
           </ul>
           <span class="hotel-numbers">Гостиниц на странице:</span>
-          <select class="hotel-numbers-control" name="hotels-on-page">
+          <select class=" select-control hotel-numbers-control" name="hotels-on-page">
             <option value="one">1</option>
             <option value="two">2</option>
             <option value="three">3</option>
-            <option value="four">4</option>
+            <option value="four" selected>4</option>
             <option value="five">5</option>
             <option value="six">6</option>
           </select>
@@ -267,11 +268,13 @@
         <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
         <p class="newsletter-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="newsletter-form-input" placeholder="Ваш e-mail" type="email" name="newsletter-email"
-            aria-label="Введите ваш Email" required>
-          <button class="button newsletter-button" type="submit">
-            Подписаться
-          </button>
+          <div class="newsletter-input-wrapper">
+            <input class="newsletter-form-input" placeholder="Ваш e-mail" type="email" name="newsletter-email"
+              aria-label="Введите ваш Email" required>
+            <button class="button newsletter-button" type="submit">
+              Подписаться
+            </button>
+          </div>
         </form>
       </section>
     </main>
