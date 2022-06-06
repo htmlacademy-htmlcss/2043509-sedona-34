@@ -200,6 +200,7 @@ body {
 }
 
 .advantages-item-subtitle {
+  width: 230px;
   color: #333333;
   margin: 0 auto;
 }
@@ -232,6 +233,10 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.advantages-item-image {
+  margin-bottom: 25px;
+}
+
 .advantages-item:nth-child(odd) {
   background-color: rgba(131, 179, 211, 0.12);
 }
@@ -256,7 +261,8 @@ body {
 }
 
 .booking-subtitle {
-  margin: 0;
+  width: 592px;
+  margin: 0 auto;
   padding-bottom: 56px;
   font-size: 22px;
   line-height: 26px;
@@ -304,12 +310,29 @@ body {
   background-position: center;
 }
 
+.newsletter-input-wrapper {
+  margin: 0 auto;
+  display: flex;
+  width: 800px;
+}
+
 .newsletter-form-input {
   font-family: inherit;
+  margin: 0;
+  padding-left: 22px;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
   background-color: #F2F2F2;
+  width: 600px;
+  height: 60px;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .newsletter-button {
+  font-family: inherit;
   width: 200px;
   height: 60px;
   padding: 12px 15px;
@@ -321,6 +344,23 @@ body {
   border-radius: 0;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.page-footer {
+  padding: 45px 70px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-social-list {
+  width: 142px;
+  margin: 0;
+  padding: 12px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+
 }
 
 .contacts-phone {
