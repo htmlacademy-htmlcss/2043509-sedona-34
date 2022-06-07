@@ -36,17 +36,17 @@ body {
 .page-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #FFFFFF;
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
+  box-shadow: 0px 0px 15px 0px #00000033;
+
 }
 
 .main-container {
   background-color: #FFFFFF;
   flex-grow: 1;
-  /* flex-shrink: 0;
-  flex-basis: auto; */
 }
 
 .visually-hidden {
@@ -82,7 +82,6 @@ body {
 /* Стилизация Хедера */
 .page-header {
   position: relative;
-  display: flex;
   padding: 0 70px 0 239px;
 }
 
@@ -93,20 +92,19 @@ body {
 }
 
 .navigation {
-  width: 891px;
+  max-width: 891px;
   display: flex;
   justify-content: space-between;
 
 }
 
 .navigation-list {
-  padding: 0;
+  max-width: 600px;
   margin: 0;
-  /* width: 390px; */
   display: flex;
-  /* justify-content: space-between; */
+  flex-wrap: wrap;
   list-style: none;
-  padding: 20px 62px 0 17px;
+  padding: 20px 0 0 17px;
 }
 
 .navigation-item {
@@ -119,10 +117,10 @@ body {
 }
 
 .navigation-user {
-  width: 264px;
+  /* max-width: 264px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
   padding: 14px 0 14px 12px;
 }
 
@@ -132,9 +130,14 @@ body {
   font-weight: 700;
   color: #000000;
   text-decoration: none;
+  vertical-align: middle;
 }
 
-
+.navigation-user-link {
+  text-decoration: none;
+  vertical-align: middle;
+  margin-right: 20px;
+}
 
 .button-booking {
   width: 160px;
@@ -151,6 +154,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto;
 }
 
 .footer-social-list {
@@ -450,7 +454,6 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  /* width: 338px; */
   margin: 0;
   margin-right: 191px;
 }
@@ -499,19 +502,19 @@ body {
 }
 
 .show-cards {
-  background-image: url(../images/icons/cards-icon.svg);
+  background-image: url("../images/icons/cards-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .show-big-card {
-  background-image: url(../images/icons/card-icon.svg);
+  background-image: url("../images/icons/card-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .show-list {
-  background-image: url(../images/icons/list-icon.svg);
+  background-image: url("../images/icons/list-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
