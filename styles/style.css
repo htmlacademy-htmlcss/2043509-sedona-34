@@ -413,7 +413,7 @@ body {
 /* Стили страницы каталога */
 
 .hotels {
-  padding: 35px 70px 70px;
+  padding: 35px 70px;
   background-image: url("../images/catalog-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -446,9 +446,8 @@ body {
 
 .hotel-parameters {
   font-family: inherit;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
 .hotel-link {
@@ -459,7 +458,13 @@ body {
   display: grid;
   grid-template-columns: repeat(2, minmax(min-content, max-content));
   column-gap: 70px;
+  padding-bottom: 35px;
 }
+
+.fieldset-wrapper:nth-child(2n) {
+  justify-self: end;
+}
+
 
 .hotels-filter-group {
   margin: 0;
