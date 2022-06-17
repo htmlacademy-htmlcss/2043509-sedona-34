@@ -61,8 +61,8 @@ body {
 }
 
 .button {
-  width: 140px;
-  height: 37px;
+  padding: 14px 15px;
+  min-width: 140px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -142,6 +142,7 @@ body {
 }
 
 .button-booking {
+  padding: 9px 15px 8px;
   width: 160px;
   margin-left: 20px;
 }
@@ -389,7 +390,6 @@ body {
   font-weight: 400;
   background-color: #F2F2F2;
   width: 600px;
-  height: 60px;
   border: none;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -423,12 +423,16 @@ body {
 
 .inner-header-title {
   margin: 0;
+  margin-bottom: 10px;
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
 }
 
 .breadcrumbs {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
   list-style: none;
   display: flex;
 }
@@ -441,21 +445,71 @@ body {
 }
 
 .hotel-parameters {
+  font-family: inherit;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
+.hotel-link {
+  padding: 9px 15px 8px;
+}
+
+.fieldset-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, max-content));
+  column-gap: 70px;
+}
+
+.hotels-filter-group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.hotels-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .hotels-filter-title {
-  font-size: 26px;
-  line-height: 20px;
+  padding: 0;
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 26px;
   font-weight: 700;
 }
 
+.price-selection-wrapper {
+  display: flex;
+  max-width: 288px;
+}
+
+.price-input {
+  width: 144px;
+}
+
+.buttons-wrapper {
+  justify-self: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+
+
 .button-filters-submit {
+  margin-bottom: 20px;
+  border: none;
+  font-family: inherit;
+  min-width: 160px;
   background-color: #82B3D3;
 }
 
 .button-reset {
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   color: #FFFFFF;
