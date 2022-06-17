@@ -496,7 +496,6 @@ body {
 }
 
 .buttons-wrapper {
-  justify-self: right;
   display: flex;
   align-items: center;
   justify-content: flex-end;
