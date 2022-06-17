@@ -63,7 +63,6 @@ body {
 .button {
   width: 140px;
   height: 37px;
-  /* padding: 9px 15px 8px; */
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -88,6 +87,7 @@ body {
   position: absolute;
   top: 0;
   left: 70px;
+  z-index: 1;
 }
 
 .navigation {
@@ -103,11 +103,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  padding: 20px 0 0 17px;
+  padding-left: 17px;
 }
 
 .navigation-item {
-  padding-bottom: 18px;
   margin-right: 34px;
 }
 
@@ -116,29 +115,35 @@ body {
 }
 
 .navigation-user {
-  max-width: 600px;
+  max-width: 460px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
 }
 
 .navigation-link {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 18px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
   text-decoration: none;
-  vertical-align: middle;
 }
 
 .navigation-user-link {
   text-decoration: none;
-  margin-right: 28px;
+  display: flex;
+  min-height: 66px;
+  min-width: 42px;
+  align-items: center;
+  justify-content: center;
 }
 
 .button-booking {
   width: 160px;
+  margin-left: 20px;
 }
 
 .page-active {
@@ -159,16 +164,23 @@ body {
 .footer-social-list {
   max-width: 350px;
   margin: 0;
-  padding: 12px;
+  padding: 0;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(24px, 1fr));
   justify-self: start;
-  column-gap: 27px;
 }
 
 .footer-social-item {
   list-style: none;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 40px;
 }
 
 .contacts-phone {
@@ -188,6 +200,18 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-color: #750057;
+  position: relative;
+}
+
+.intro::after {
+  content: "";
+  background-image: url("../images/intro-decoration.svg");
+  position: absolute;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  min-height: 57px;
 }
 
 .image-intro {
@@ -261,7 +285,7 @@ body {
 }
 
 .advantages-item-additional {
-  padding: 80px 85px 81px;
+  padding: 80px 85px;
 }
 
 .advantages-list,
