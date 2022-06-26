@@ -77,6 +77,19 @@ body {
   justify-content: center;
 }
 
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled {
+  background-color: #E5E5E5;
+  cursor: default;
+}
+
+.button:focus {
+  outline: none;
+}
+
 /* Стилизация Хедера */
 .page-header {
   position: relative;
@@ -127,6 +140,8 @@ body {
   align-items: center;
 }
 
+
+
 .navigation-link {
   display: block;
   padding: 20px 0 18px;
@@ -144,13 +159,52 @@ body {
   min-width: 42px;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
+
+.navigation-user-link:nth-child(1) {
+  background-image: url(../images/icons/search-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navigation-user-link:nth-child(2) {
+  background-image: url(../images/icons/favorite-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navigation-user-link:nth-child(2)::after {
+  content: "12";
+  font-size: 10px;
+  line-height: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #7DB54F;
+  position: absolute;
+  top: 15px;
+  left: 24px;
+  z-index: 2;
+}
+
 
 .button-booking {
   padding: 9px 15px 8px;
-  width: 160px;
+  min-width: 160px;
   margin-left: 20px;
 }
+
+.button-booking:hover,
+.button-booking:focus {
+  background-color: #615048;
+}
+
+
 
 .page-active::after {
   content: "";
@@ -195,11 +249,55 @@ body {
   min-height: 40px;
 }
 
-.contacts-phone {
+.footer-social-link:active .footer-social-image path {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
+.footer-social-link:hover .footer-social-image path {
+  fill: #68A2CA;
+}
+
+.footer-social-link:focus .footer-social-image path {
+  fill: #68A2CA;
+  outline: none;
+}
+
+.footer-social-link:focus {
+  outline: none;
+}
+
+
+.contact-phone {
   font-size: 40px;
   line-height: 40px;
   text-decoration: none;
   color: #000000;
+}
+
+.contact-phone:hover,
+.contact-phone:focus {
+  outline: none;
+  color: #756157;
+}
+
+.contact-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.htmlacademy-link:hover .htmlacademy-link-image path {
+  fill: #756157;
+}
+
+.htmlacademy-link:focus .htmlacademy-link-image path {
+  fill: #756157;
+}
+
+.htmlacademy-link:focus {
+  outline: none;
+}
+
+.htmlacademy-link:active .htmlacademy-link-image path {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 /* Стили главной страницы */
@@ -385,10 +483,14 @@ body {
   display: flex;
   margin: 0 auto;
   max-width: 574px;
-  height: 60px;
   padding: 12px 15px;
   font-size: 20px;
   line-height: 36px;
+}
+
+.booking-button:hover,
+.booking-button:focus {
+  background-color: #615048;
 }
 
 .newsletter {
@@ -446,7 +548,6 @@ body {
 .newsletter-button {
   font-family: inherit;
   width: 200px;
-  height: 60px;
   padding: 12px 15px;
   font-size: 20px;
   line-height: 36px;
@@ -456,6 +557,11 @@ body {
   border-radius: 0;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.newsletter-button:hover,
+.newsletter-button:focus {
+  background-color: #68A2CA;
 }
 
 /* Стили страницы каталога */
