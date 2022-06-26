@@ -693,14 +693,21 @@ body {
   flex-direction: column;
 }
 
-
-
 .button-filters-submit {
   margin-bottom: 20px;
   border: none;
   font-family: inherit;
   min-width: 160px;
   background-color: #82B3D3;
+}
+
+.button-filters-submit:hover,
+.button-filters-submit:focus {
+  background-color: #68A2CA;
+}
+
+.button-filters-submit:disabled {
+  background-color: #E5E5E5;
 }
 
 .button-reset {
@@ -711,6 +718,21 @@ body {
   background-color: inherit;
   border: none;
   cursor: pointer;
+}
+
+.button-reset:hover {
+  color: rgb(255, 255, 255, 0.6);
+}
+
+.button-reset:focus {
+  outline: none;
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.button-reset:active {
+  color: rgb(255, 255, 255, 0.3);
+  border: none;
 }
 
 .hotels-catalog {
@@ -755,22 +777,35 @@ body {
   gap: 8px;
 }
 
-.display-method-item {
-  border: 2px solid #E5E5E5;
-  border-radius: 4px;
-}
-
 .display-method-item-active {
   border-color: #000000;
 }
 
-
 .display-method-button {
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
   text-decoration: none;
   color: #000000;
   display: block;
   width: 44px;
   height: 44px;
+}
+
+.display-method-button-active {
+  border-color: #000000;
+}
+
+.display-method-button:hover {
+  border-color: #000000;
+}
+
+.display-method-button:focus {
+  border-color: #68A2CA;
+  outline: none;
+}
+
+.display-method-button:active {
+  border-color: #000000;
 }
 
 .show-cards {
@@ -840,12 +875,28 @@ body {
   color: #333333;
 }
 
+.hotel-link:hover,
+.hotel-link:focus {
+  background-color: #615048;
+  outline: none;
+}
+
 .hotel-link-favorite {
   background-color: #82B3D3;
 }
 
+.hotel-link-favorite:hover,
+.hotel-link-favorite:focus {
+  background-color: #68A2CA;
+}
+
 .hotel-link-favorite-active {
   background-color: #7DB54F;
+}
+
+.hotel-link-favorite-active:hover,
+.hotel-link-favorite-active:focus {
+  background-color: #6C9E42;
 }
 
 .hotel-card-rating {
@@ -860,6 +911,17 @@ body {
   text-transform: uppercase;
 }
 
+.hotel-stars-rating {
+  display: flex;
+  overflow: hidden;
+  background-image: url(../images/icons/star-icon.svg);
+  background-repeat: repeat;
+  background-position: center;
+}
+
+.rating-four {
+  padding-right: 20px;
+}
 
 /* Пагинация и количество карточек на странице */
 
@@ -883,10 +945,6 @@ body {
   padding: 0;
 }
 
-.pagination-item {
-  margin: 0;
-  padding: 0;
-}
 
 .pagination-link {
   display: flex;
@@ -901,6 +959,34 @@ body {
   background-color: #82B3D3;
   text-decoration: none;
   border-radius: 4px;
+}
+
+.pagination-link-decorative-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.pagination-link:hover:not(.pagination-current) {
+  background-color: #68A2CA;
+}
+
+.pagination-link:focus:not(.pagination-current) {
+  background-color: #68A2CA;
+  outline: none;
+}
+
+.pagination-link:active:not(.pagination-current) {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-current {
