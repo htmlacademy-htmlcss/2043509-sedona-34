@@ -121,17 +121,23 @@
                     &#8381;:</legend>
                   <div class="price-selection-wrapper">
                     <label class="price-selection">
-                      <input class="price-input" name="price-from" type="text" value="0">
-                      от
+                      <input class="price-input price-input-min" name="price-from" type="text" value="0">
+                      <span class="price-label">от</span>
                     </label>
                     <label class="price-selection">
-                      <input class="price-input" name="price-to" type="text" value="9000">
-                      до
+                      <input class="price-input price-input-max" name="price-to" type="text" value="9000">
+                      <span class="price-label">до</span>
                     </label>
                   </div>
-                  <div class="price-control">
-                    <button class="button-range" type="button"></button>
-                    <button class="button-range" type="button"></button>
+                  <div class="price-range-scale">
+                    <div class="price-range-bar" style="left: 0; width: 237px">
+                      <button class="button-range button-range-min" type="button">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button class="button-range button-range-max" type="button">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
+                    </div>
                   </div>
                 </fieldset>
                 <div class="buttons-wrapper">
