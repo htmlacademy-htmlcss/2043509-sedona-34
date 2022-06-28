@@ -28,7 +28,7 @@ html {
 
 body {
   color: #000000;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   margin: 0;
   padding: 0;
 }
@@ -37,14 +37,14 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   max-width: 1200px;
   margin: 0 auto;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .main-container {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   flex-grow: 1;
 }
 
@@ -67,7 +67,7 @@ body {
   line-height: 20px;
   font-weight: 700;
   background-color: #756157;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 4px;
   text-transform: uppercase;
   text-decoration: none;
@@ -81,8 +81,9 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.button:disabled {
-  background-color: #E5E5E5;
+.button:disabled,
+.button:disabled:hover {
+  background-color: #e5e5e5;
   cursor: default;
 }
 
@@ -157,13 +158,13 @@ body {
 }
 
 .search {
-  background-image: url(../images/icons/search-icon.svg);
+  background-image: url("../images/icons/search-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .favorites {
-  background-image: url(../images/icons/favorite-icon.svg);
+  background-image: url("../images/icons/favorite-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -175,11 +176,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #7DB54F;
+  background-color: #7db54f;
   position: absolute;
   top: 15px;
   left: 24px;
@@ -208,7 +209,7 @@ body {
 
 /* Стилизация Футера */
 .page-footer {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 45px 70px 35px;
   align-items: center;
   margin-top: auto;
@@ -245,11 +246,11 @@ body {
 }
 
 .footer-social-link:hover .footer-social-image path {
-  fill: #68A2CA;
+  fill: #68a2ca;
 }
 
 .footer-social-link:focus .footer-social-image path {
-  fill: #68A2CA;
+  fill: #68a2ca;
   outline: none;
 }
 
@@ -350,8 +351,8 @@ body {
 .advantages-card-wrapper {
   max-width: 400px;
   padding: 92px 85px;
-  color: #FFFFFF;
-  background-color: #82B3D3;
+  color: #ffffff;
+  background-color: #82b3d3;
   text-align: center;
 }
 
@@ -506,7 +507,7 @@ body {
 
 .newsletter-index {
   background-image: url("../images/newsletter-background.jpg");
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #756257;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -526,7 +527,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   width: 600px;
   border: none;
   border-top-left-radius: 10px;
@@ -540,7 +541,7 @@ body {
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   border: none;
   border-radius: 0;
   border-top-right-radius: 10px;
@@ -549,7 +550,7 @@ body {
 
 .newsletter-button:hover,
 .newsletter-button:focus {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
 }
 
 /* Стили страницы каталога */
@@ -559,7 +560,7 @@ body {
   background-image: url("../images/catalog-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #756257;
 }
 
@@ -603,7 +604,7 @@ body {
   font-size: 16px;
   line-height: 21px;
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .breadcrumbs-link:hover {
@@ -688,23 +689,23 @@ body {
   border: none;
   font-family: inherit;
   min-width: 160px;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
 }
 
 .button-filters-submit:hover,
 .button-filters-submit:focus {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
 }
 
 .button-filters-submit:disabled {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 .button-reset {
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: inherit;
   border: none;
   cursor: pointer;
@@ -716,7 +717,7 @@ body {
 
 .button-reset:focus {
   outline: none;
-  border: 3px solid #83B3D3;
+  border: 3px solid #83b3d3;
   border-radius: 4px;
 }
 
@@ -753,7 +754,7 @@ body {
   line-height: 21px;
   color: #333333;
   padding-left: 20px;
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
 }
 
@@ -772,7 +773,7 @@ body {
 }
 
 .display-method-button {
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
   text-decoration: none;
   color: #000000;
@@ -790,7 +791,7 @@ body {
 }
 
 .display-method-button:focus {
-  border-color: #68A2CA;
+  border-color: #68a2ca;
   outline: none;
 }
 
@@ -822,7 +823,7 @@ body {
 .hotel-list {
   list-style: none;
   padding: 0 0 66px;
-  border-bottom: 1px solid #E6E6E6;
+  border-bottom: 1px solid #e6e6e6;
   margin: 0;
   margin-bottom: 30px;
   display: grid;
@@ -872,21 +873,21 @@ body {
 }
 
 .hotel-link-favorite {
-  background-color: #82B3D3;
+  background-color: #82b3d3;
 }
 
 .hotel-link-favorite:hover,
 .hotel-link-favorite:focus {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
 }
 
 .hotel-link-favorite-active {
-  background-color: #7DB54F;
+  background-color: #7db54f;
 }
 
 .hotel-link-favorite-active:hover,
 .hotel-link-favorite-active:focus {
-  background-color: #6C9E42;
+  background-color: #6c9e42;
 }
 
 .hotel-card-rating {
@@ -896,7 +897,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #333333;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-radius: 4px;
   text-transform: uppercase;
 }
@@ -965,8 +966,8 @@ body {
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
-  color: #FFFFFF;
-  background-color: #82B3D3;
+  color: #ffffff;
+  background-color: #82b3d3;
   text-decoration: none;
   border-radius: 4px;
 }
@@ -980,18 +981,18 @@ body {
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
-  color: #FFFFFF;
-  background-color: #82B3D3;
+  color: #ffffff;
+  background-color: #82b3d3;
   text-decoration: none;
   border-radius: 4px;
 }
 
 .pagination-link:hover:not(.pagination-current) {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
 }
 
 .pagination-link:focus:not(.pagination-current) {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
   outline: none;
 }
 
@@ -1000,7 +1001,7 @@ body {
 }
 
 .pagination-current {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   color: #000000;
 }
 
