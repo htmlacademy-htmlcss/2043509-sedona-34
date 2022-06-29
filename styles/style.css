@@ -650,6 +650,9 @@ body {
   margin: 0;
   padding: 0 0 6px 0;
   border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .hotels-filter-list {
@@ -719,6 +722,10 @@ body {
 .control-mark-checkbox:hover {
   background-color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
+}
+
+.control-mark-checkbox:active {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .control-mark-radio:hover {
@@ -910,15 +917,38 @@ body {
 }
 
 .select-control {
+  position: relative;
   width: 290px;
   height: 49px;
+  padding: 0 35px 0 20px;
+  appearance: none;
+  background-image: url(../images/icons/arrow-down-icon.svg);
+  background-repeat: no-repeat;
+  background-position: right 15px center;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  padding-left: 20px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.select-control:hover,
+.select-control:focus {
+  border: 2px solid #68a2ca;
+  outline: none;
+}
+
+.select-control:active {
+  border: 2px solid #3f5e72;
+}
+
+.select-control:disabled,
+.select-control:hover:disabled {
+  opacity: 0.3;
+  cursor: default;
+  border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 /* Выбор способа отображения карточек отелей */
