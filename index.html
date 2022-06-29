@@ -171,6 +171,59 @@
         </a>
       </footer>
     </div>
+
+    <div class="modal-container">
+      <div class="modal-hotels-search-wrapper">
+        <button class="modal-close-button"></button>
+        <h2 class="modal-heading">Поиск гостиницы в Седоне</h2>
+        <form class="form-hotels-search" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="travel-dates">
+            <h3 class="visually-hidden">Даты проживания.</h3>
+            <label class="form-hotels-search-label" for="arrival-date">Дата заезда:</label>
+            <input class="form-hotels-search-input dates-input" type="text" name="arrival-date" id="arrival-date"
+              required value="27 апреля 2020">
+            <span class="notification-text warning-text">Мы не можем отправить вас в прошлое.</span>
+            <label class="form-hotels-search-label" for="departure-date">Дата выезда: </label>
+            <input class="form-hotels-search-input dates-input" type="text" name="departure-date" id="departure-date"
+              required value="1 сентября 2021">
+            <span class="notification-text">На эти даты есть свободные номера. Пока есть.</span>
+          </fieldset>
+
+          <fieldset class="number-of-persons">
+            <h3 class="visually-hidden">Количество проживающих.</h3>
+            <div class="persons-wrapper adults-wrapper">
+              <label class="form-hotels-search-label" for="number-of-adults">Взрослые:</label>
+              <div class="input-buttons-wrapper">
+                <input class="form-hotels-search-input numbers-of-persons-input" type="text" name="number-of-adults"
+                  id="number-of-adults" value="2">
+                <button class="less-more-button number-down-button" type="button">
+                  <span class="visually-hidden">Уменьшить количество проживающих взрослых.</span>
+                </button>
+                <button class="less-more-button number-up-button" type="button">
+                  <span class="visually-hidden">Увеличить количество проживающих взрослых </span>
+                </button>
+              </div>
+            </div>
+            <div class="persons-wrapper children-wrapper">
+              <label class="form-hotels-search-label" for="number-of-children">Дети:
+                <button class="tolltip-button"></button>
+              </label>
+              <div class="input-buttons-wrapper">
+                <input class="form-hotels-search-input numbers-of-persons-input" type="text" name="number-of-children"
+                  id="number-of-children" value="1">
+                <button class="less-more-button number-down-button" type="button">
+                  <span class="visually-hidden">Уменьшить количество проживающих взрослых.</span>
+                </button>
+                <button class="less-more-button number-up-button" type="button">
+                  <span class="visually-hidden">Увеличить количество проживающих взрослых </span>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+          <button class="form-search-submit-button button" type="submit">Найти</button>
+        </form>
+      </div>
+    </div>
   </body>
 
 </html>
