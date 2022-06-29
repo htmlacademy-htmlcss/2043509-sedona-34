@@ -716,6 +716,24 @@ body {
   background-color: #3f5e72;
 }
 
+.control-mark-checkbox:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.control-mark-radio:hover {
+  cursor: pointer;
+}
+
+.control-input:focus+.control-mark-checkbox {
+  background-color: rgba(255, 255, 255, 0.6);
+  outline: 3px solid #83b3d3;
+}
+
+.control-input:focus+.control-mark-radio {
+  outline: 3px solid #83b3d3;
+}
+
 /* Сортировка по цене */
 
 .price-selection-wrapper {
