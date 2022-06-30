@@ -92,6 +92,7 @@ body {
 }
 
 /* Стилизация Хедера */
+
 .page-header {
   position: relative;
   padding: 0 70px 0 256px;
@@ -187,7 +188,6 @@ body {
   z-index: 2;
 }
 
-
 .button-booking {
   padding: 9px 15px 8px;
   min-width: 160px;
@@ -220,7 +220,7 @@ body {
 
 .footer-social-list {
   max-width: 350px;
-  margin: 0;
+  margin: 0 0 0 2px;
   padding: 0;
   list-style: none;
   display: grid;
@@ -239,36 +239,33 @@ body {
   justify-content: center;
   min-width: 40px;
   min-height: 40px;
-}
-
-.footer-social-link:active .footer-social-image path {
-  fill: rgba(104, 162, 202, 0.3);
-}
-
-.footer-social-link:hover .footer-social-image path {
-  fill: #68a2ca;
-}
-
-.footer-social-link:focus .footer-social-image path {
-  fill: #68a2ca;
+  color: #82b3d3;
   outline: none;
+}
+
+.footer-social-link:hover {
+  color: #68a2ca;
 }
 
 .footer-social-link:focus {
-  outline: none;
+  color: #68a2ca;
+
 }
 
+.footer-social-link:active {
+  color: rgba(104, 162, 202, 0.3);
+}
 
 .contact-phone {
   font-size: 40px;
   line-height: 40px;
   text-decoration: none;
   color: #000000;
+  outline: none;
 }
 
 .contact-phone:hover,
 .contact-phone:focus {
-  outline: none;
   color: #756157;
 }
 
@@ -276,20 +273,18 @@ body {
   color: rgba(117, 97, 87, 0.3);
 }
 
-.htmlacademy-link:hover .htmlacademy-link-image path {
-  fill: #756157;
-}
-
-.htmlacademy-link:focus .htmlacademy-link-image path {
-  fill: #756157;
-}
-
-.htmlacademy-link:focus {
+.htmlacademy-link {
   outline: none;
+  color: #000000;
 }
 
-.htmlacademy-link:active .htmlacademy-link-image path {
-  fill: rgba(117, 97, 87, 0.3);
+.htmlacademy-link:hover,
+.htmlacademy-link:focus {
+  color: #756157;
+}
+
+.htmlacademy-link:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 /* Стили главной страницы */
@@ -387,44 +382,40 @@ body {
 
 .advantages-item {
   text-align: center;
-  padding: 103px 85px 102px;
+  padding: 102px 85px;
 }
 
 .advantages-item-additional {
-  padding: 80px 85px;
+  position: relative;
+  padding: 182px 85px 80px;
+}
+
+.advantages-item-additional::before {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  width: 75px;
+  height: 75px;
 }
 
 .advantages-item-additional-housing::before {
-  content: "";
-  display: block;
-  width: 75px;
-  height: 75px;
   background-image: url("../images/icons/advantage-icon-housing.svg");
   background-repeat: no-repeat;
   background-position: center;
-  margin: 0 auto 25px;
 }
 
 .advantages-item-additional-food::before {
-  content: "";
-  display: block;
-  width: 75px;
-  height: 75px;
   background-image: url("../images/icons/advantage-icon-burger.svg");
   background-repeat: no-repeat;
   background-position: center;
-  margin: 0 auto 25px;
 }
 
 .advantages-item-additional-souvenirs::before {
-  content: "";
-  display: block;
-  width: 75px;
-  height: 75px;
   background-image: url("../images/icons/advantage-icon-giftbox.svg");
   background-repeat: no-repeat;
   background-position: center;
-  margin: 0 auto 25px;
 }
 
 .advantages-list,
@@ -556,7 +547,7 @@ body {
 /* Стили страницы каталога */
 
 .hotels {
-  padding: 35px 70px 20px;
+  padding: 35px 70px 25px;
   background-image: url("../images/catalog-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -605,26 +596,16 @@ body {
   line-height: 21px;
   text-decoration: none;
   color: #ffffff;
-}
-
-.breadcrumbs-link:hover {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.breadcrumbs-link:focus {
   outline: none;
+}
+
+.breadcrumbs-link:hover,
+.breadcrumbs-link:focus {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .breadcrumbs-link:active {
   color: rgba(255, 255, 255, 0.3);
-}
-
-.breadcrumbs-link:hover .breadcrumbs-link-home-icon path {
-  fill: rgba(255, 255, 255, 0.6);
-}
-
-.breadcrumbs-link:active .breadcrumbs-link-home-icon path {
-  fill: rgba(255, 255, 255, 0.3);
 }
 
 /* Форма сортировки гостиниц */
@@ -647,8 +628,9 @@ body {
 }
 
 .hotels-filter-group {
+  position: relative;
   margin: 0;
-  padding: 0 0 6px 0;
+  padding: 0;
   border: none;
   display: flex;
   flex-direction: column;
@@ -681,7 +663,7 @@ body {
 
 .control-input {
   appearance: none;
-  padding-left: 40px;
+  padding-left: 36px;
   margin: 0;
 }
 
@@ -746,7 +728,7 @@ body {
 .price-selection-wrapper {
   display: flex;
   max-width: 288px;
-  margin-bottom: 34px;
+  margin-bottom: 40px;
 }
 
 .price-selection {
@@ -770,11 +752,13 @@ body {
 }
 
 .price-input:focus {
-  box-shadow: 0 0 0 3px #81b3d2;
+  border-color: #ffffff;
+  box-shadow: inset 0 0 0 3px #81b3d2, 0 0 0 3px #81b3d2;
 }
 
 .price-input:active {
   background-color: #756257;
+  box-shadow: none;
 }
 
 .price-input-min {
@@ -798,7 +782,8 @@ body {
 }
 
 .price-range-scale {
-  position: relative;
+  position: absolute;
+  bottom: 10px;
   width: 288px;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
@@ -820,6 +805,7 @@ body {
   background-color: #ffffff;
   border-radius: 5px;
   cursor: pointer;
+  outline: none;
 }
 
 .button-range-min {
@@ -837,7 +823,6 @@ body {
 }
 
 .button-range:focus {
-  outline: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   border: 3px solid #83b3d3;
 }
@@ -873,7 +858,7 @@ body {
 }
 
 .button-reset {
-  padding: 6px 18px;
+  padding: 6px 18px 0;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -924,7 +909,7 @@ body {
   appearance: none;
   background-image: url("../images/icons/arrow-down-icon.svg");
   background-repeat: no-repeat;
-  background-position: right 15px center;
+  background-position: right 16px center;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
@@ -1017,7 +1002,7 @@ body {
 
 .hotel-list {
   list-style: none;
-  padding: 0 0 66px;
+  padding: 0 0 64px;
   border-bottom: 1px solid #e6e6e6;
   margin: 0;
   margin-bottom: 30px;
@@ -1224,6 +1209,7 @@ body {
 /* Модальное окно */
 
 .modal-container {
+  display: none;
   position: fixed;
   z-index: 5;
   top: 0;
@@ -1242,6 +1228,7 @@ body {
   background-color: #ffffff;
   padding: 62px 70px 70px;
   border-radius: 30px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
 .modal-close-button {
@@ -1284,7 +1271,7 @@ body {
 
 .travel-dates {
   display: grid;
-  row-gap: 10px;
+  row-gap: 8px;
   grid-template-columns: 155px 420px;
   border: none;
   margin: 0 0 11px;
@@ -1305,7 +1292,7 @@ body {
   outline: none;
   border: none;
   border-radius: 4px;
-  padding: 15px 17px 14px 19px;
+  padding: 15px 17px 15px 19px;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
@@ -1530,7 +1517,7 @@ body {
   font-weight: 400;
   line-height: 21px;
   text-transform: none;
-  padding: 15px 18px 18px 22px;
+  padding: 15px 18px 22px 23px;
   border-radius: 10px;
   width: 256px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
@@ -1560,6 +1547,6 @@ body {
   display: block;
 }
 
-.tooltip-icon path {
-  fill: #ffffff;
+.tooltip-icon {
+  color: #ffffff;
 }
