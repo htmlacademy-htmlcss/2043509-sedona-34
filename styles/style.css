@@ -1225,6 +1225,7 @@ body {
 
 .modal-container {
   position: fixed;
+  z-index: 5;
   top: 0;
   bottom: 0;
   right: 0;
@@ -1291,6 +1292,7 @@ body {
 }
 
 .form-hotels-search-label {
+  position: relative;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -1307,12 +1309,39 @@ body {
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
+  color: #000000;
 }
 
 .dates-input {
   background-image: url("../images/icons/calendar-icon.svg");
   background-position: right 17px center;
   background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.dates-input::placeholder {
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #000000;
+  opacity: 0.6;
+}
+
+.dates-input:hover,
+.dates-input:focus {
+  background-color: #e6e6e6;
+}
+
+.dates-input:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.dates-input:active {
+  color: #000000;
+  font-weight: 700;
+  opacity: 1;
+  background-color: #ffffff;
+  outline: 2px solid #000000;
 }
 
 .notification-text {
@@ -1332,7 +1361,7 @@ body {
   display: grid;
   grid-template-columns: 50% 233px;
   border: none;
-  margin: 0;
+  margin: 0 0 40px 0;
   padding: 0;
   justify-content: space-between;
 }
@@ -1363,10 +1392,48 @@ body {
   background-color: #f2f2f2;
 }
 
+.less-more-button:focus {
+  outline: none;
+}
+
+.less-more-button:hover.number-down-button::before,
+.less-more-button:focus.number-down-button::before {
+  background-color: #000000;
+}
+
+.less-more-button:focus.number-down-button,
+.less-more-button:focus.number-up-button {
+  border: 3px solid #83b3d3;
+  border-radius: 4px;
+}
+
+.less-more-button:active.number-down-button,
+.less-more-button:active.number-up-button {
+  border: none;
+}
+
+.less-more-button:hover.number-up-button::before,
+.less-more-button:hover.number-up-button::after,
+.less-more-button:focus.number-up-button::before,
+.less-more-button:focus.number-up-button::after {
+  background-color: #000000;
+}
+
+.less-more-button:active.number-down-button::before,
+.less-more-button:active.number-up-button::before,
+.less-more-button:active.number-up-button::after,
+.less-more-button:active.number-up-button::before,
+.less-more-button:active.number-up-button::after {
+  opacity: 0.2;
+}
+
 .number-down-button {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 25px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
 }
 
 .number-down-button::before {
@@ -1382,8 +1449,11 @@ body {
 
 .number-up-button {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 25px;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 25px;
+  height: 25px;
 }
 
 .number-up-button::before,
@@ -1400,4 +1470,96 @@ body {
 
 .number-up-button::after {
   transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.form-search-submit-button {
+  width: 100%;
+  background-color: #83b3d3;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  min-height: 60px;
+}
+
+.form-search-submit-button:hover,
+.form-search-submit-button:focus,
+.form-search-submit-button:active {
+  background-color: #68a2ca;
+}
+
+.form-search-submit-button:focus {
+  outline: 3px solid #756257;
+}
+
+.form-search-submit-button:active {
+  outline: none;
+}
+
+/* Тултип */
+
+.tooltip {
+  position: absolute;
+  left: 55px;
+  top: 2px;
+  display: block;
+}
+
+.tooltip-button {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 50%;
+  background-color: #83b3d3;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.tooltip-text {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  top: 100%;
+  transform: translateX(-45%);
+  margin-top: 15px;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: none;
+  padding: 15px 18px 18px 22px;
+  border-radius: 10px;
+  width: 256px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip-text:after {
+  content: "";
+  background-image: url("../images/icons/triangle-tooltip.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip-button:hover,
+.tooltip-button:focus {
+  background-color: #68a2ca;
+  outline: none;
+}
+
+.tooltip-button:hover+.tooltip-text,
+.tooltip-button:focus+.tooltip-text {
+  display: block;
+}
+
+.tooltip-icon path {
+  fill: #ffffff;
 }

@@ -181,11 +181,11 @@
             <h3 class="visually-hidden">Даты проживания.</h3>
             <label class="form-hotels-search-label" for="arrival-date">Дата заезда:</label>
             <input class="form-hotels-search-input dates-input" type="text" name="arrival-date" id="arrival-date"
-              required value="27 апреля 2020">
+              required value="27 апреля 2020" placeholder="Укажите дату">
             <span class="notification-text warning-text">Мы не можем отправить вас в прошлое.</span>
             <label class="form-hotels-search-label" for="departure-date">Дата выезда: </label>
             <input class="form-hotels-search-input dates-input" type="text" name="departure-date" id="departure-date"
-              required value="1 сентября 2021">
+              required value="1 сентября 2021" placeholder="Укажите дату">
             <span class="notification-text">На эти даты есть свободные номера. Пока есть.</span>
           </fieldset>
 
@@ -205,9 +205,20 @@
               </div>
             </div>
             <div class="persons-wrapper children-wrapper">
-              <label class="form-hotels-search-label" for="number-of-children">Дети:
-                <button class="tolltip-button"></button>
-              </label>
+              <span class="form-hotels-search-label">
+                <label class="form-hotels-search-label" for="number-of-children">Дети:
+                </label>
+                <span class="tooltip">
+                  <button class="tooltip-button" type="button" aria-labelledby="tooltip-label">
+                    <svg class="tooltip-icon" width="2" height="12" viewbox="0 0 2 12" fill="none"
+                      xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Иконка дополнительной информации.">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0h2v2H0V0Zm2 12H0V3h2v9Z" fill="#000" /></svg>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с
+                    вами, возраст которых от 6 до 18
+                    лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+              </span>
               <div class="input-buttons-wrapper">
                 <input class="form-hotels-search-input numbers-of-persons-input" type="text" name="number-of-children"
                   id="number-of-children" value="1">
