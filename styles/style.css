@@ -622,7 +622,7 @@ body {
 .hotel-parameters {
   font-family: inherit;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
 }
 
 .fieldset-wrapper {
@@ -675,6 +675,7 @@ body {
   appearance: none;
   padding-left: 36px;
   margin: 0;
+  outline: none;
 }
 
 .control-mark {
@@ -879,6 +880,7 @@ body {
   color: #ffffff;
   background-color: inherit;
   border: none;
+  outline: none;
   cursor: pointer;
 }
 
@@ -1233,7 +1235,7 @@ body {
 }
 
 .modal-container-close {
-  display: none;
+  /* display: none; */
 }
 
 .modal-hotels-search-wrapper {
@@ -1269,12 +1271,12 @@ body {
 }
 
 .modal-close-button:focus {
-  outline: 3px solid #83b3d3;
+  border: 3px solid #83b3d3;
 }
 
 .modal-close-button:active {
   opacity: 0.3;
-  outline: none;
+  border: none;
 }
 
 .modal-heading {
@@ -1493,11 +1495,11 @@ body {
 }
 
 .form-search-submit-button:focus {
-  outline: 3px solid #756257;
+  border: 3px solid #756257;
 }
 
 .form-search-submit-button:active {
-  outline: none;
+  border: none;
 }
 
 /* Тултип */
