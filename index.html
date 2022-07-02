@@ -171,22 +171,32 @@
         </a>
       </footer>
     </div>
-
-    <div class="modal-container modal-container-close">
+    <!-- Для показа модального окна необходимо добавить <div> с классом modal-container класс is-open -->
+    <div class="modal-container">
       <div class="modal-hotels-search-wrapper">
         <button class="modal-close-button"></button>
         <h2 class="modal-heading">Поиск гостиницы в Седоне</h2>
         <form class="form-hotels-search" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="travel-dates">
             <h3 class="visually-hidden">Даты проживания.</h3>
-            <label class="form-hotels-search-label" for="arrival-date">Дата заезда:</label>
-            <input class="form-hotels-search-input dates-input" type="text" name="arrival-date" id="arrival-date"
-              required value="" placeholder="Укажите дату">
-            <span class="notification-text warning-text">Мы не можем отправить вас в прошлое.</span>
-            <label class="form-hotels-search-label" for="departure-date">Дата выезда: </label>
-            <input class="form-hotels-search-input dates-input" type="text" name="departure-date" id="departure-date"
-              required value="" placeholder="Укажите дату">
-            <span class="notification-text">На эти даты есть свободные номера. Пока есть.</span>
+            <!-- При правильном заполнении поля ввода даты к <div> c классом dates-wrapper добавить класс is-valid для показа сообщения -->
+            <!-- При неправильном заполнении поля ввода даты к <div> c классом dates-wrapper добавить класс is-invalid для показа сообщения -->
+            <div class="dates-wrapper">
+              <label class="form-hotels-search-label" for="arrival-date">Дата заезда:</label>
+              <input class="form-hotels-search-input dates-input" type="text" name="arrival-date" id="arrival-date"
+                required value="" placeholder="Укажите дату">
+              <span class="successful-text">На эти даты есть свободные номера. Пока есть.</span>
+              <span class="warning-text">Мы не можем отправить вас в прошлое.</span>
+            </div>
+            <!-- При правильном заполнении поля ввода даты к <div> c классом dates-wrapper добавить класс is-valid для показа сообщения -->
+            <!-- При неправильном заполнении поля ввода даты к <div> c классом dates-wrapper добавить класс is-invalid для показа сообщения -->
+            <div class="dates-wrapper">
+              <label class="form-hotels-search-label" for="departure-date">Дата выезда: </label>
+              <input class="form-hotels-search-input dates-input" type="text" name="departure-date" id="departure-date"
+                required value="" placeholder="Укажите дату">
+              <span class="successful-text">На эти даты есть свободные номера. Пока есть.</span>
+              <span class="warning-text">Мы не можем отправить вас в прошлое.</span>
+            </div>
           </fieldset>
 
           <fieldset class="number-of-persons">

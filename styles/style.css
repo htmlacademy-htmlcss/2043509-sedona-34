@@ -349,7 +349,6 @@ body {
 .advantages-card {
   display: grid;
   grid-template-columns: repeat(2, minmax(min-content, max-content));
-
 }
 
 .advantages-card-wrapper {
@@ -482,6 +481,8 @@ body {
 .booking-button:focus {
   background-color: #615048;
 }
+
+/* Секция рассылки */
 
 .newsletter {
   text-align: center;
@@ -1013,7 +1014,6 @@ body {
   background-position: center;
 }
 
-
 /* Карточки отелей */
 
 .hotel-list {
@@ -1158,7 +1158,6 @@ body {
   padding: 0;
 }
 
-
 .pagination-link {
   display: flex;
   justify-content: center;
@@ -1225,6 +1224,7 @@ body {
 /* Модальное окно */
 
 .modal-container {
+  display: none;
   position: fixed;
   z-index: 5;
   top: 0;
@@ -1234,8 +1234,8 @@ body {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
-.modal-container-close {
-  /* display: none; */
+.modal-container.is-open {
+  display: block;
 }
 
 .modal-hotels-search-wrapper {
@@ -1289,12 +1289,24 @@ body {
 }
 
 .travel-dates {
-  display: grid;
-  row-gap: 8px;
-  grid-template-columns: 155px 420px;
   border: none;
-  margin: 0 0 11px;
   padding: 0;
+  margin: 0;
+}
+
+.dates-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 155px 420px;
+  margin-bottom: 38px;
+}
+
+.dates-wrapper.is-valid .successful-text {
+  display: block;
+}
+
+.dates-wrapper.is-invalid .warning-text {
+  display: block;
 }
 
 .form-hotels-search-label {
@@ -1321,7 +1333,7 @@ body {
 
 .dates-input {
   background-image: url("../images/icons/calendar-icon.svg");
-  background-position: right 17px center;
+  background-position: right 18px center;
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -1351,8 +1363,10 @@ body {
   outline: 2px solid #000000;
 }
 
-.notification-text {
-  display: block;
+.successful-text {
+  display: none;
+  position: absolute;
+  bottom: -29px;
   width: 100%;
   grid-column: 2/3;
   font-size: 16px;
@@ -1361,6 +1375,13 @@ body {
 }
 
 .warning-text {
+  display: none;
+  position: absolute;
+  bottom: -29px;
+  width: 100%;
+  grid-column: 2/3;
+  font-size: 16px;
+  line-height: 21px;
   color: #ff5757;
 }
 
@@ -1397,9 +1418,6 @@ body {
   border-radius: 4px;
   cursor: pointer;
   background-color: #f2f2f2;
-}
-
-.less-more-button:focus {
   outline: none;
 }
 
