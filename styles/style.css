@@ -890,7 +890,7 @@ body {
 }
 
 .button-reset {
-  padding: 6px 18px 3px;
+  padding: 6px 18px;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -906,13 +906,15 @@ body {
 }
 
 .button-reset:focus {
-  outline: 3px solid #83b3d3;
+  border: 3px solid #83b3d3;
+  padding: 3px 18px;
   border-radius: 4px;
 }
 
 .button-reset:active {
   color: rgba(255, 255, 255, 0.3);
-  outline: none;
+  border: none;
+  padding: 6px 18px;
 }
 
 .hotels-catalog {
