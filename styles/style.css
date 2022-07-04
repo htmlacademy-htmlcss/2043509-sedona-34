@@ -27,6 +27,7 @@ html {
 }
 
 body {
+  min-width: 1280px;
   color: #000000;
   background-color: #f2f2f2;
   margin: 0;
@@ -37,9 +38,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #ffffff;
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
+  background-color: #ffffff;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -610,6 +611,10 @@ body {
   outline: none;
 }
 
+.breadcrumbs-item:last-child .breadcrumbs-link {
+  pointer-events: none;
+}
+
 .breadcrumbs-link:hover,
 .breadcrumbs-link:focus {
   color: rgba(255, 255, 255, 0.6);
@@ -624,28 +629,29 @@ body {
 .hotel-parameters {
   font-family: inherit;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .fieldset-wrapper {
   display: grid;
   grid-template-columns: repeat(2, minmax(min-content, max-content));
   column-gap: 70px;
-  padding-bottom: 44px;
+  margin-bottom: 24px;
 }
 
 .fieldset-wrapper:nth-child(2n) {
   justify-self: end;
+  margin-right: 2px;
 }
 
 .hotels-filter-group {
   position: relative;
+  max-width: 150px;
   margin: 0;
-  padding: 0;
+  padding: 0 0 20px 0;
   border: none;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
 }
 
 .hotels-filter-list {
@@ -676,7 +682,7 @@ body {
 
 .control-input {
   appearance: none;
-  padding-left: 36px;
+  padding-left: 40px;
   margin: 0;
   outline: none;
 }
@@ -686,6 +692,7 @@ body {
   width: 20px;
   height: 20px;
   left: 0;
+  top: 0;
   background-color: #ffffff;
 }
 
@@ -744,9 +751,10 @@ body {
 /* Сортировка по цене */
 
 .price-selection-wrapper {
+  position: relative;
   display: flex;
   max-width: 288px;
-  margin-bottom: 40px;
+  margin: 4px 0 40px;
 }
 
 .price-selection {
@@ -762,7 +770,11 @@ body {
   font-size: 18px;
   line-height: 21px;
   border: 2px solid #ffffff;
-  padding: 12px 35px 12px 18px;
+  padding: 12px 35px 10px 16px;
+}
+
+.price-input::placeholder {
+  color: #ffffff;
 }
 
 .price-input:hover {
@@ -793,15 +805,15 @@ body {
 
 .price-label {
   position: absolute;
-  top: 14px;
-  right: 15px;
+  top: 12px;
+  right: 17px;
   color: #ffffff;
   opacity: 0.3;
 }
 
 .price-range-scale {
   position: absolute;
-  bottom: 10px;
+  bottom: -32px;
   width: 288px;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
@@ -854,7 +866,7 @@ body {
 .buttons-wrapper {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  margin-top: 59px;
   flex-direction: column;
 }
 
@@ -876,7 +888,7 @@ body {
 }
 
 .button-reset {
-  padding: 4px 18px 3px;
+  padding: 5px 18px 3px;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
