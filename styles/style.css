@@ -759,6 +759,10 @@ body {
   position: relative;
 }
 
+.price-selection:first-child>.price-label {
+  right: 14px;
+}
+
 .price-input {
   outline: none;
   background-color: transparent;
@@ -886,7 +890,7 @@ body {
 }
 
 .button-reset {
-  padding: 5px 18px 3px;
+  padding: 6px 18px 3px;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -1399,7 +1403,7 @@ body {
 
 .number-of-persons {
   display: grid;
-  grid-template-columns: 50% 233px;
+  grid-template-columns: 50% 231px;
   border: none;
   margin: 0 0 40px 0;
   padding: 0;
@@ -1416,10 +1420,11 @@ body {
 }
 
 .numbers-of-persons-input {
+  text-align: center;
   width: 133px;
   appearance: none;
-  padding-left: 61px;
-  padding-right: 50px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
 .less-more-button {
@@ -1511,11 +1516,15 @@ body {
 
 .form-search-submit-button {
   width: 100%;
+  padding: 12px 0;
   background-color: #83b3d3;
   outline: none;
   border: none;
   border-radius: 10px;
-  min-height: 60px;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
 }
 
 .form-search-submit-button:hover,
@@ -1526,10 +1535,12 @@ body {
 
 .form-search-submit-button:focus {
   border: 3px solid #756257;
+  padding: 9px 0;
 }
 
 .form-search-submit-button:active {
   border: none;
+  padding: 12px 0;
 }
 
 /* Тултип */
