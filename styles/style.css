@@ -259,7 +259,6 @@ body {
 
 .footer-social-link:focus {
   color: #68a2ca;
-
 }
 
 .footer-social-link:active {
@@ -732,7 +731,6 @@ body {
 
 .control:active>.control-mark-checkbox {
   background-color: rgba(255, 255, 255, 0.3);
-  ;
 }
 
 .control-mark-checkbox:active {
@@ -936,7 +934,7 @@ body {
   position: relative;
   width: 290px;
   height: 49px;
-  padding: 0 35px 0 20px;
+  padding: 0 35px 0 19px;
   appearance: none;
   background-image: url("../images/icons/arrow-down-icon.svg");
   background-repeat: no-repeat;
